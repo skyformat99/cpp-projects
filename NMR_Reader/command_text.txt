@@ -1,0 +1,17 @@
+%INCLUDE%
+
+C:\Program Files\Microsoft Visual Studio 8\VC\INCLUDE
+
+%LIB%
+
+C:\Program Files\Microsoft Visual Studio 8\VC\LIB;
+C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\lib
+
+%PATH%
+
+C:\Program Files\Microsoft Visual Studio 8\Common7\IDE;
+C:\Program Files\Microsoft Visual Studio 8\VC\bin
+
+Compile code:
+
+cl /EHsc fileRead.cpp

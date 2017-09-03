@@ -1,0 +1,448 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (0e271a37).
+//
+// c:\usr\cpp\single_unit\TTankX.tlh
+//
+// C++ source equivalent of Win32 type library TTank.X
+// compiler-generated file created 09/16/10 at 14:13:03 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("3eaba0ef-2fba-41f8-a970-3f238a4bab01"))
+/* LIBID */ __TTANKXLib;
+struct __declspec(uuid("be6cad3f-28f1-4eac-b210-9caa5ca8b5b8"))
+/* dispinterface */ _DTTankX;
+struct __declspec(uuid("9c0bd59b-8842-47da-8105-dc3e883d72d1"))
+/* dispinterface */ _DTTankXEvents;
+struct /* coclass */ TTankX;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DTTankX, __uuidof(_DTTankX));
+_COM_SMARTPTR_TYPEDEF(_DTTankXEvents, __uuidof(_DTTankXEvents));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("be6cad3f-28f1-4eac-b210-9caa5ca8b5b8"))
+_DTTankX : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCurBlockName,put=PutCurBlockName))
+    _bstr_t CurBlockName;
+    __declspec(property(get=GetCurBlockOwner,put=PutCurBlockOwner))
+    _bstr_t CurBlockOwner;
+    __declspec(property(get=GetCurBlockMemo,put=PutCurBlockMemo))
+    _bstr_t CurBlockMemo;
+    __declspec(property(get=GetCurBlockStartTime,put=PutCurBlockStartTime))
+    double CurBlockStartTime;
+    __declspec(property(get=GetCurBlockStopTime,put=PutCurBlockStopTime))
+    double CurBlockStopTime;
+    __declspec(property(get=GetClientID,put=PutClientID))
+    long ClientID;
+    __declspec(property(get=GetEvType,put=PutEvType))
+    long EvType;
+    __declspec(property(get=GetEvDataSize,put=PutEvDataSize))
+    long EvDataSize;
+    __declspec(property(get=GetEvFirstTime,put=PutEvFirstTime))
+    double EvFirstTime;
+    __declspec(property(get=GetEvDForm,put=PutEvDForm))
+    long EvDForm;
+    __declspec(property(get=GetEvSampFreq,put=PutEvSampFreq))
+    float EvSampFreq;
+    __declspec(property(get=GetEvTimeStamp,put=PutEvTimeStamp))
+    double EvTimeStamp;
+    __declspec(property(get=GetEvChannel,put=PutEvChannel))
+    long EvChannel;
+    __declspec(property(get=GetUsername,put=PutUsername))
+    _bstr_t Username;
+    __declspec(property(get=GetDomain,put=PutDomain))
+    _bstr_t Domain;
+    __declspec(property(get=GetPassword,put=PutPassword))
+    _bstr_t Password;
+    __declspec(property(get=GetCurBlockNotes,put=PutCurBlockNotes))
+    _bstr_t CurBlockNotes;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    long ConnectServer (
+        _bstr_t ServerName,
+        _bstr_t ClientName );
+    long AddClient (
+        _bstr_t ClientName );
+    long AddTank (
+        _bstr_t TankName,
+        _bstr_t FilePath );
+    long CheckTank (
+        _bstr_t TankName );
+    HRESULT CloseTank ( );
+    _bstr_t CodeToString (
+        long EvCode );
+    HRESULT DeleteClient (
+        _bstr_t ClientName );
+    long RemoveTank (
+        _bstr_t TankName );
+    _bstr_t EvTypeToString (
+        long evTypeCode );
+    _bstr_t DFromToString (
+        long DFormCode );
+    _bstr_t GetDebug (
+        _bstr_t TankName );
+    _bstr_t GetError ( );
+    long OpenTank (
+        _bstr_t TankName,
+        _bstr_t AccessMode );
+    long SetRefTime (
+        double TimeOS );
+    long SelectBlock (
+        _bstr_t BlockName );
+    HRESULT EnableTankDebug (
+        _bstr_t TankName );
+    HRESULT DisableTankDebug (
+        _bstr_t TankName );
+    long GetClientID (
+        _bstr_t ClientName );
+    long GetCodeSpecs (
+        long EvCode );
+    long StringToEvCode (
+        _bstr_t EvCode );
+    _variant_t GetEventCodes (
+        long EvType );
+    long GetStatus (
+        long StatCode );
+    long InitializeTank (
+        _bstr_t TankName );
+    _bstr_t QueryBlockName (
+        long BlockNumber );
+    HRESULT ReleaseServer ( );
+    long ResetTank (
+        _bstr_t TankName );
+    _bstr_t FancyTime (
+        double Time,
+        _bstr_t Format );
+    long StartRecord (
+        _bstr_t BlockName );
+    HRESULT StopRecord ( );
+    _bstr_t GetEnumTank (
+        long Index );
+    long AddServer (
+        _bstr_t ServerName,
+        _bstr_t IPAddress,
+        _bstr_t Username,
+        _bstr_t Domain,
+        _bstr_t Password );
+    long RemoveServer (
+        _bstr_t ServerName );
+    _bstr_t GetServerItem (
+        _bstr_t ServerName,
+        _bstr_t ItemCode );
+    _bstr_t GetEnumServer (
+        long Index );
+    _bstr_t GetTankItem (
+        _bstr_t TankName,
+        _bstr_t ItemCode );
+    _bstr_t ToTTD (
+        _bstr_t ServName,
+        _bstr_t TankName,
+        _bstr_t BlockName,
+        _bstr_t EvName,
+        long * ChanList );
+    _bstr_t FromTTD (
+        _bstr_t TTD,
+        _bstr_t FieldCode );
+    long RemoveEvents (
+        _bstr_t BlockName,
+        double RelTime1,
+        double RelTime2 );
+    long RemoveBlock (
+        _bstr_t BlockName );
+    _variant_t GetEpocsV (
+        _bstr_t TankCode,
+        double T1,
+        double T2,
+        long MaxEpocs );
+    _bstr_t GetEpocCode (
+        long Index );
+    long GetNPer (
+        long DForm );
+    long GetEpocs (
+        double * pEPs,
+        long TankCode,
+        double T1,
+        double T2,
+        long MaxRet );
+    long WriteEvents (
+        long NumEv );
+    long ReadEvents (
+        long MaxRet,
+        long TankCode,
+        long Channel,
+        long SortCode,
+        double T1,
+        double T2,
+        long Options );
+    long ReadEventsV (
+        long MaxRet,
+        _bstr_t TankCode,
+        long Channel,
+        long SortCode,
+        double T1,
+        double T2,
+        _bstr_t Options );
+    long QryEpocAt (
+        long TankCode,
+        double rTime,
+        long ReqItem,
+        double * RetVal );
+    _variant_t QryEpocAtV (
+        _bstr_t TankCode,
+        double rTime,
+        long ReqItem );
+    _bstr_t GetHotBlock ( );
+    long SwitchClient (
+        _bstr_t ClientName );
+    long BuildScalar (
+        long Index,
+        _bstr_t TankCode,
+        long SortChan,
+        double TimeStamp,
+        double Value );
+    long BuildEpocEv (
+        long Index,
+        _bstr_t TankCode,
+        double TimeStamp,
+        double Value,
+        _bstr_t BuddyEpoc );
+    HRESULT SetBuildHead (
+        _bstr_t TankCode,
+        long DataForm,
+        double SampFreq,
+        long nNet );
+    long BuildSnipEv (
+        long Index,
+        long SortChan,
+        double TimeStamp,
+        long HasSort,
+        float * pData );
+    long BuildStreamEv (
+        long Index,
+        long SortChan,
+        double TimeStamp,
+        float * pData );
+    long BuildSnipEvV (
+        long Index,
+        long SortChan,
+        double TimeStamp,
+        long HasSort,
+        VARIANT * vData );
+    long BuildStreamEvV (
+        long Index,
+        long SortChan,
+        double TimeStamp,
+        const _variant_t & vData );
+    long ParseEv (
+        long RecIndex,
+        double * TimeStamp,
+        long * Channel,
+        long * SortCode,
+        long * Npts,
+        float * pData );
+    _variant_t ParseEvV (
+        long RecIndex,
+        long nRecs );
+    _variant_t ParseEvInfoV (
+        long RecIndex,
+        long nRecs,
+        long nItem );
+    long SetFilter (
+        long TankCode,
+        long TestCode,
+        double V1,
+        double V2 );
+    long SetFilterWithDesc (
+        _bstr_t FiltDesc );
+    long ParseFilterDesc (
+        _bstr_t FiltDesc,
+        long * TankCode,
+        long * TestCode,
+        double * V1,
+        double * V2 );
+    _bstr_t BuildFilterDesc (
+        long TankCode,
+        long TestCode,
+        double V1,
+        double V2 );
+    HRESULT ResetFilters ( );
+    long IndexEvent (
+        long TankCode,
+        long Channel,
+        long SortCode );
+    long CreateEpocIndexing ( );
+    HRESULT ClearEpocIndexing ( );
+    long SetFilterTolerance (
+        double loosenFactor );
+    double GetFilterTolerance ( );
+    long SetFilterWithDescEx (
+        _bstr_t Filter );
+    long SetFilterArray (
+        long Dim,
+        long ID,
+        _bstr_t Filter,
+        long Exclusive );
+    long SetEpocTimeFilter (
+        long EpocCode,
+        double Offset,
+        double Dur );
+    // Method 'SetEpocTimeFilterV' not emitted because argument 'EpocCode' has invalid type: LPWSTR
+    long SetRefEpoc (
+        long EpocCode );
+    // Method 'SetRefEpocV' not emitted because argument 'EpocCode' has invalid type: LPWSTR
+    long GetEpocsEx (
+        double * pEPs,
+        long TankCode,
+        long MaxReturn,
+        long Mode );
+    _variant_t GetEpocsExV (
+        _bstr_t TankCode,
+        long Mode );
+    long ReadEventsSimple (
+        _bstr_t EventName );
+    long ReadWaves (
+        long TankCode );
+    _variant_t ReadWavesV (
+        _bstr_t TankCode );
+    long GetValidTimeRanges (
+        double * pRanges,
+        long MaxReturn );
+    _variant_t GetValidTimeRangesV ( );
+    long ReadWavesOnTimeRange (
+        long TankCode,
+        long Channel );
+    // Method 'ReadWavesOnTimeRangeV' not emitted because argument 'TankCode' has invalid type: LPWSTR
+    long SetGlobal (
+        long code,
+        double Value );
+    // Method 'SetGlobalV' not emitted because argument 'name' has invalid type: LPWSTR
+    // Method 'SetGlobalStringV' not emitted because argument 'name' has invalid type: LPWSTR
+    double GetGlobal (
+        long code );
+    // Method 'GetGlobalV' not emitted because argument 'name' has invalid type: LPWSTR
+    // Method 'GetGlobalStringV' not emitted because argument 'name' has invalid type: LPWSTR
+    // Method 'SetGlobals' not emitted because argument 'str' has invalid type: LPWSTR
+    HRESULT ResetGlobals ( );
+    long GetCodeSpecsLazy (
+        long EvCode );
+    long SetUseSortName (
+        _bstr_t sortID );
+    _bstr_t GetSortName (
+        _bstr_t EventName,
+        long idxSortID );
+    long SetEpocTimeFilterB (
+        _bstr_t EpocCode,
+        double Offset,
+        double Dur );
+    long SetRefEpocB (
+        _bstr_t EpocCode );
+    _variant_t ReadWavesOnTimeRangeB (
+        _bstr_t TankCode,
+        long Channel );
+    long SetGlobalB (
+        _bstr_t name,
+        double Value );
+    long SetGlobalStringB (
+        _bstr_t name,
+        _bstr_t strvalue );
+    double GetGlobalB (
+        _bstr_t name );
+    _bstr_t GetGlobalStringB (
+        _bstr_t name );
+    long SetGlobalsB (
+        _bstr_t str );
+    _variant_t GetEvTsqIdx ( );
+    long SaveSortCodes (
+        _bstr_t sortName,
+        _bstr_t snipName,
+        long idxChan,
+        _bstr_t sortCondition,
+        const _variant_t & sortCodeArray );
+    _bstr_t GetSortCondition (
+        _bstr_t sortName,
+        _bstr_t snipName,
+        long idxChan );
+    long DeleteSortCode (
+        _bstr_t sortName,
+        _bstr_t snipName,
+        long idxChan );
+    _variant_t GetSortChanMap (
+        _bstr_t sortName,
+        _bstr_t snipName );
+    HRESULT AboutBox ( );
+
+    // Properties:
+    _bstr_t GetCurBlockName ( );
+    void PutCurBlockName ( _bstr_t _val );
+    _bstr_t GetCurBlockOwner ( );
+    void PutCurBlockOwner ( _bstr_t _val );
+    _bstr_t GetCurBlockMemo ( );
+    void PutCurBlockMemo ( _bstr_t _val );
+    double GetCurBlockStartTime ( );
+    void PutCurBlockStartTime ( double _val );
+    double GetCurBlockStopTime ( );
+    void PutCurBlockStopTime ( double _val );
+    long GetClientID ( );
+    void PutClientID ( long _val );
+    long GetEvType ( );
+    void PutEvType ( long _val );
+    long GetEvDataSize ( );
+    void PutEvDataSize ( long _val );
+    double GetEvFirstTime ( );
+    void PutEvFirstTime ( double _val );
+    long GetEvDForm ( );
+    void PutEvDForm ( long _val );
+    float GetEvSampFreq ( );
+    void PutEvSampFreq ( float _val );
+    double GetEvTimeStamp ( );
+    void PutEvTimeStamp ( double _val );
+    long GetEvChannel ( );
+    void PutEvChannel ( long _val );
+    _bstr_t GetUsername ( );
+    void PutUsername ( _bstr_t _val );
+    _bstr_t GetDomain ( );
+    void PutDomain ( _bstr_t _val );
+    _bstr_t GetPassword ( );
+    void PutPassword ( _bstr_t _val );
+    _bstr_t GetCurBlockNotes ( );
+    void PutCurBlockNotes ( _bstr_t _val );
+};
+
+struct __declspec(uuid("9c0bd59b-8842-47da-8105-dc3e883d72d1"))
+_DTTankXEvents : IDispatch
+{};
+
+struct __declspec(uuid("670490ce-57d2-4176-8e74-80c4c6a47d88"))
+TTankX;
+    // [ default ] dispinterface _DTTankX
+    // [ default, source ] dispinterface _DTTankXEvents
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\usr\cpp\single_unit\TTankX.tli"
+
+#pragma pack(pop)

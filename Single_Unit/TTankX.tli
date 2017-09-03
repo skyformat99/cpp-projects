@@ -1,0 +1,872 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 15.00.30729.01 (0e271a37).
+//
+// c:\usr\cpp\single_unit\TTankX.tli
+//
+// Wrapper implementations for Win32 type library TTank.X
+// compiler-generated file created 09/16/10 at 14:13:03 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _DTTankX wrapper method implementations
+//
+
+inline long _DTTankX::ConnectServer ( _bstr_t ServerName, _bstr_t ClientName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x12, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)ServerName, (BSTR)ClientName);
+    return _result;
+}
+
+inline long _DTTankX::AddClient ( _bstr_t ClientName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x13, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)ClientName);
+    return _result;
+}
+
+inline long _DTTankX::AddTank ( _bstr_t TankName, _bstr_t FilePath ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x14, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)TankName, (BSTR)FilePath);
+    return _result;
+}
+
+inline long _DTTankX::CheckTank ( _bstr_t TankName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)TankName);
+    return _result;
+}
+
+inline HRESULT _DTTankX::CloseTank ( ) {
+    return _com_dispatch_method(this, 0x16, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline _bstr_t _DTTankX::CodeToString ( long EvCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x17, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", EvCode);
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DTTankX::DeleteClient ( _bstr_t ClientName ) {
+    return _com_dispatch_method(this, 0x18, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)ClientName);
+}
+
+inline long _DTTankX::RemoveTank ( _bstr_t TankName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x19, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)TankName);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::EvTypeToString ( long evTypeCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x1a, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", evTypeCode);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::DFromToString ( long DFormCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x1b, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", DFormCode);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetDebug ( _bstr_t TankName ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x1c, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008", (BSTR)TankName);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetError ( ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x1d, DISPATCH_METHOD, VT_BSTR, (void*)&_result, NULL);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::OpenTank ( _bstr_t TankName, _bstr_t AccessMode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x1e, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)TankName, (BSTR)AccessMode);
+    return _result;
+}
+
+inline long _DTTankX::SetRefTime ( double TimeOS ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x1f, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0005", TimeOS);
+    return _result;
+}
+
+inline long _DTTankX::SelectBlock ( _bstr_t BlockName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x20, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)BlockName);
+    return _result;
+}
+
+inline HRESULT _DTTankX::EnableTankDebug ( _bstr_t TankName ) {
+    return _com_dispatch_method(this, 0x21, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)TankName);
+}
+
+inline HRESULT _DTTankX::DisableTankDebug ( _bstr_t TankName ) {
+    return _com_dispatch_method(this, 0x22, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)TankName);
+}
+
+inline long _DTTankX::GetClientID ( _bstr_t ClientName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x23, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)ClientName);
+    return _result;
+}
+
+inline long _DTTankX::GetCodeSpecs ( long EvCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x24, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", EvCode);
+    return _result;
+}
+
+inline long _DTTankX::StringToEvCode ( _bstr_t EvCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x25, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)EvCode);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetEventCodes ( long EvType ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x26, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0003", EvType);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::GetStatus ( long StatCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x27, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", StatCode);
+    return _result;
+}
+
+inline long _DTTankX::InitializeTank ( _bstr_t TankName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x28, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)TankName);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::QueryBlockName ( long BlockNumber ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x29, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", BlockNumber);
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DTTankX::ReleaseServer ( ) {
+    return _com_dispatch_method(this, 0x2a, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline long _DTTankX::ResetTank ( _bstr_t TankName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x2b, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)TankName);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::FancyTime ( double Time, _bstr_t Format ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x2c, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0005\x0008", Time, (BSTR)Format);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::StartRecord ( _bstr_t BlockName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x2d, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)BlockName);
+    return _result;
+}
+
+inline HRESULT _DTTankX::StopRecord ( ) {
+    return _com_dispatch_method(this, 0x2e, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline _bstr_t _DTTankX::GetEnumTank ( long Index ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x2f, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", Index);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::AddServer ( _bstr_t ServerName, _bstr_t IPAddress, _bstr_t Username, _bstr_t Domain, _bstr_t Password ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x30, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008\x0008\x0008\x0008", (BSTR)ServerName, (BSTR)IPAddress, (BSTR)Username, (BSTR)Domain, (BSTR)Password);
+    return _result;
+}
+
+inline long _DTTankX::RemoveServer ( _bstr_t ServerName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x31, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)ServerName);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::GetServerItem ( _bstr_t ServerName, _bstr_t ItemCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x32, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)ServerName, (BSTR)ItemCode);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetEnumServer ( long Index ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x33, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", Index);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetTankItem ( _bstr_t TankName, _bstr_t ItemCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x34, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)TankName, (BSTR)ItemCode);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::ToTTD ( _bstr_t ServName, _bstr_t TankName, _bstr_t BlockName, _bstr_t EvName, long * ChanList ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x35, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0008\x0008\x0008\x4003", (BSTR)ServName, (BSTR)TankName, (BSTR)BlockName, (BSTR)EvName, ChanList);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::FromTTD ( _bstr_t TTD, _bstr_t FieldCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x36, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)TTD, (BSTR)FieldCode);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::RemoveEvents ( _bstr_t BlockName, double RelTime1, double RelTime2 ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x37, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0005\x0005", (BSTR)BlockName, RelTime1, RelTime2);
+    return _result;
+}
+
+inline long _DTTankX::RemoveBlock ( _bstr_t BlockName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x38, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)BlockName);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetEpocsV ( _bstr_t TankCode, double T1, double T2, long MaxEpocs ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x39, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008\x0005\x0005\x0003", (BSTR)TankCode, T1, T2, MaxEpocs);
+    return _variant_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetEpocCode ( long Index ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x3a, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003", Index);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::GetNPer ( long DForm ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x3b, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", DForm);
+    return _result;
+}
+
+inline long _DTTankX::GetEpocs ( double * pEPs, long TankCode, double T1, double T2, long MaxRet ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x3c, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x4005\x0003\x0005\x0005\x0003", pEPs, TankCode, T1, T2, MaxRet);
+    return _result;
+}
+
+inline long _DTTankX::WriteEvents ( long NumEv ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x3d, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", NumEv);
+    return _result;
+}
+
+inline long _DTTankX::ReadEvents ( long MaxRet, long TankCode, long Channel, long SortCode, double T1, double T2, long Options ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x3e, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0003\x0003\x0005\x0005\x0003", MaxRet, TankCode, Channel, SortCode, T1, T2, Options);
+    return _result;
+}
+
+inline long _DTTankX::ReadEventsV ( long MaxRet, _bstr_t TankCode, long Channel, long SortCode, double T1, double T2, _bstr_t Options ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x3f, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0008\x0003\x0003\x0005\x0005\x0008", MaxRet, (BSTR)TankCode, Channel, SortCode, T1, T2, (BSTR)Options);
+    return _result;
+}
+
+inline long _DTTankX::QryEpocAt ( long TankCode, double rTime, long ReqItem, double * RetVal ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x40, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0005\x0003\x4005", TankCode, rTime, ReqItem, RetVal);
+    return _result;
+}
+
+inline _variant_t _DTTankX::QryEpocAtV ( _bstr_t TankCode, double rTime, long ReqItem ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x41, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008\x0005\x0003", (BSTR)TankCode, rTime, ReqItem);
+    return _variant_t(_result, false);
+}
+
+inline _bstr_t _DTTankX::GetHotBlock ( ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x42, DISPATCH_METHOD, VT_BSTR, (void*)&_result, NULL);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::SwitchClient ( _bstr_t ClientName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x43, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)ClientName);
+    return _result;
+}
+
+inline long _DTTankX::BuildScalar ( long Index, _bstr_t TankCode, long SortChan, double TimeStamp, double Value ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x44, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0008\x0003\x0005\x0005", Index, (BSTR)TankCode, SortChan, TimeStamp, Value);
+    return _result;
+}
+
+inline long _DTTankX::BuildEpocEv ( long Index, _bstr_t TankCode, double TimeStamp, double Value, _bstr_t BuddyEpoc ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x45, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0008\x0005\x0005\x0008", Index, (BSTR)TankCode, TimeStamp, Value, (BSTR)BuddyEpoc);
+    return _result;
+}
+
+inline HRESULT _DTTankX::SetBuildHead ( _bstr_t TankCode, long DataForm, double SampFreq, long nNet ) {
+    return _com_dispatch_method(this, 0x46, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0003\x0005\x0003", (BSTR)TankCode, DataForm, SampFreq, nNet);
+}
+
+inline long _DTTankX::BuildSnipEv ( long Index, long SortChan, double TimeStamp, long HasSort, float * pData ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x47, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0005\x0003\x4004", Index, SortChan, TimeStamp, HasSort, pData);
+    return _result;
+}
+
+inline long _DTTankX::BuildStreamEv ( long Index, long SortChan, double TimeStamp, float * pData ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x48, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0005\x4004", Index, SortChan, TimeStamp, pData);
+    return _result;
+}
+
+inline long _DTTankX::BuildSnipEvV ( long Index, long SortChan, double TimeStamp, long HasSort, VARIANT * vData ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x49, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0005\x0003\x400c", Index, SortChan, TimeStamp, HasSort, vData);
+    return _result;
+}
+
+inline long _DTTankX::BuildStreamEvV ( long Index, long SortChan, double TimeStamp, const _variant_t & vData ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x4a, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0005\x000c", Index, SortChan, TimeStamp, &vData);
+    return _result;
+}
+
+inline long _DTTankX::ParseEv ( long RecIndex, double * TimeStamp, long * Channel, long * SortCode, long * Npts, float * pData ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x4b, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x4005\x4003\x4003\x4003\x4004", RecIndex, TimeStamp, Channel, SortCode, Npts, pData);
+    return _result;
+}
+
+inline _variant_t _DTTankX::ParseEvV ( long RecIndex, long nRecs ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x4c, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0003\x0003", RecIndex, nRecs);
+    return _variant_t(_result, false);
+}
+
+inline _variant_t _DTTankX::ParseEvInfoV ( long RecIndex, long nRecs, long nItem ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x4d, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0003\x0003\x0003", RecIndex, nRecs, nItem);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::SetFilter ( long TankCode, long TestCode, double V1, double V2 ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x4e, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0005\x0005", TankCode, TestCode, V1, V2);
+    return _result;
+}
+
+inline long _DTTankX::SetFilterWithDesc ( _bstr_t FiltDesc ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x4f, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)FiltDesc);
+    return _result;
+}
+
+inline long _DTTankX::ParseFilterDesc ( _bstr_t FiltDesc, long * TankCode, long * TestCode, double * V1, double * V2 ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x50, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x4003\x4003\x4005\x4005", (BSTR)FiltDesc, TankCode, TestCode, V1, V2);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::BuildFilterDesc ( long TankCode, long TestCode, double V1, double V2 ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x51, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0003\x0003\x0005\x0005", TankCode, TestCode, V1, V2);
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT _DTTankX::ResetFilters ( ) {
+    return _com_dispatch_method(this, 0x52, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline long _DTTankX::IndexEvent ( long TankCode, long Channel, long SortCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x53, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0003", TankCode, Channel, SortCode);
+    return _result;
+}
+
+inline long _DTTankX::CreateEpocIndexing ( ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x54, DISPATCH_METHOD, VT_I4, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _DTTankX::ClearEpocIndexing ( ) {
+    return _com_dispatch_method(this, 0x55, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline long _DTTankX::SetFilterTolerance ( double loosenFactor ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x56, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0005", loosenFactor);
+    return _result;
+}
+
+inline double _DTTankX::GetFilterTolerance ( ) {
+    double _result = 0;
+    _com_dispatch_method(this, 0x57, DISPATCH_METHOD, VT_R8, (void*)&_result, NULL);
+    return _result;
+}
+
+inline long _DTTankX::SetFilterWithDescEx ( _bstr_t Filter ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x58, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)Filter);
+    return _result;
+}
+
+inline long _DTTankX::SetFilterArray ( long Dim, long ID, _bstr_t Filter, long Exclusive ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x59, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0008\x0003", Dim, ID, (BSTR)Filter, Exclusive);
+    return _result;
+}
+
+inline long _DTTankX::SetEpocTimeFilter ( long EpocCode, double Offset, double Dur ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x5a, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0005\x0005", EpocCode, Offset, Dur);
+    return _result;
+}
+
+inline long _DTTankX::SetRefEpoc ( long EpocCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x5c, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", EpocCode);
+    return _result;
+}
+
+inline long _DTTankX::GetEpocsEx ( double * pEPs, long TankCode, long MaxReturn, long Mode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x5e, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x4005\x0003\x0003\x0003", pEPs, TankCode, MaxReturn, Mode);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetEpocsExV ( _bstr_t TankCode, long Mode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x5f, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)TankCode, Mode);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::ReadEventsSimple ( _bstr_t EventName ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x60, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)EventName);
+    return _result;
+}
+
+inline long _DTTankX::ReadWaves ( long TankCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x61, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", TankCode);
+    return _result;
+}
+
+inline _variant_t _DTTankX::ReadWavesV ( _bstr_t TankCode ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x62, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008", (BSTR)TankCode);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::GetValidTimeRanges ( double * pRanges, long MaxReturn ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x63, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x4005\x0003", pRanges, MaxReturn);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetValidTimeRangesV ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x64, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, NULL);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::ReadWavesOnTimeRange ( long TankCode, long Channel ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x65, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", TankCode, Channel);
+    return _result;
+}
+
+inline long _DTTankX::SetGlobal ( long code, double Value ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x67, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0005", code, Value);
+    return _result;
+}
+
+inline double _DTTankX::GetGlobal ( long code ) {
+    double _result = 0;
+    _com_dispatch_method(this, 0x6a, DISPATCH_METHOD, VT_R8, (void*)&_result, 
+        L"\x0003", code);
+    return _result;
+}
+
+inline HRESULT _DTTankX::ResetGlobals ( ) {
+    return _com_dispatch_method(this, 0x6e, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline long _DTTankX::GetCodeSpecsLazy ( long EvCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x6f, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", EvCode);
+    return _result;
+}
+
+inline long _DTTankX::SetUseSortName ( _bstr_t sortID ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x70, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)sortID);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::GetSortName ( _bstr_t EventName, long idxSortID ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x71, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)EventName, idxSortID);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::SetEpocTimeFilterB ( _bstr_t EpocCode, double Offset, double Dur ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x72, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0005\x0005", (BSTR)EpocCode, Offset, Dur);
+    return _result;
+}
+
+inline long _DTTankX::SetRefEpocB ( _bstr_t EpocCode ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x73, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)EpocCode);
+    return _result;
+}
+
+inline _variant_t _DTTankX::ReadWavesOnTimeRangeB ( _bstr_t TankCode, long Channel ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x74, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)TankCode, Channel);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::SetGlobalB ( _bstr_t name, double Value ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x75, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0005", (BSTR)name, Value);
+    return _result;
+}
+
+inline long _DTTankX::SetGlobalStringB ( _bstr_t name, _bstr_t strvalue ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x76, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)name, (BSTR)strvalue);
+    return _result;
+}
+
+inline double _DTTankX::GetGlobalB ( _bstr_t name ) {
+    double _result = 0;
+    _com_dispatch_method(this, 0x77, DISPATCH_METHOD, VT_R8, (void*)&_result, 
+        L"\x0008", (BSTR)name);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::GetGlobalStringB ( _bstr_t name ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x78, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008", (BSTR)name);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::SetGlobalsB ( _bstr_t str ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x79, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008", (BSTR)str);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetEvTsqIdx ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x7a, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, NULL);
+    return _variant_t(_result, false);
+}
+
+inline long _DTTankX::SaveSortCodes ( _bstr_t sortName, _bstr_t snipName, long idxChan, _bstr_t sortCondition, const _variant_t & sortCodeArray ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x7b, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008\x0003\x0008\x000c", (BSTR)sortName, (BSTR)snipName, idxChan, (BSTR)sortCondition, &sortCodeArray);
+    return _result;
+}
+
+inline _bstr_t _DTTankX::GetSortCondition ( _bstr_t sortName, _bstr_t snipName, long idxChan ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x7c, DISPATCH_METHOD, VT_BSTR, (void*)&_result, 
+        L"\x0008\x0008\x0003", (BSTR)sortName, (BSTR)snipName, idxChan);
+    return _bstr_t(_result, false);
+}
+
+inline long _DTTankX::DeleteSortCode ( _bstr_t sortName, _bstr_t snipName, long idxChan ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x7d, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0008\x0008\x0003", (BSTR)sortName, (BSTR)snipName, idxChan);
+    return _result;
+}
+
+inline _variant_t _DTTankX::GetSortChanMap ( _bstr_t sortName, _bstr_t snipName ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    _com_dispatch_method(this, 0x7e, DISPATCH_METHOD, VT_VARIANT, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)sortName, (BSTR)snipName);
+    return _variant_t(_result, false);
+}
+
+inline HRESULT _DTTankX::AboutBox ( ) {
+    return _com_dispatch_method(this, DISPID_ABOUTBOX, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline _bstr_t _DTTankX::GetCurBlockName ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x1, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutCurBlockName ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x1, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DTTankX::GetCurBlockOwner ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x2, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutCurBlockOwner ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x2, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DTTankX::GetCurBlockMemo ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x3, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutCurBlockMemo ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x3, VT_BSTR, (BSTR)_val);
+}
+
+inline double _DTTankX::GetCurBlockStartTime ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0x4, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutCurBlockStartTime ( double _val ) {
+    _com_dispatch_propput(this, 0x4, VT_R8, _val);
+}
+
+inline double _DTTankX::GetCurBlockStopTime ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0x5, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutCurBlockStopTime ( double _val ) {
+    _com_dispatch_propput(this, 0x5, VT_R8, _val);
+}
+
+inline long _DTTankX::GetClientID ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x6, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutClientID ( long _val ) {
+    _com_dispatch_propput(this, 0x6, VT_I4, _val);
+}
+
+inline long _DTTankX::GetEvType ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x7, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvType ( long _val ) {
+    _com_dispatch_propput(this, 0x7, VT_I4, _val);
+}
+
+inline long _DTTankX::GetEvDataSize ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x8, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvDataSize ( long _val ) {
+    _com_dispatch_propput(this, 0x8, VT_I4, _val);
+}
+
+inline double _DTTankX::GetEvFirstTime ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0x9, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvFirstTime ( double _val ) {
+    _com_dispatch_propput(this, 0x9, VT_R8, _val);
+}
+
+inline long _DTTankX::GetEvDForm ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0xa, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvDForm ( long _val ) {
+    _com_dispatch_propput(this, 0xa, VT_I4, _val);
+}
+
+inline float _DTTankX::GetEvSampFreq ( ) {
+    float _result = 0;
+    _com_dispatch_propget(this, 0xb, VT_R4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvSampFreq ( float _val ) {
+    _com_dispatch_propput(this, 0xb, VT_R4, _val);
+}
+
+inline double _DTTankX::GetEvTimeStamp ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0xc, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvTimeStamp ( double _val ) {
+    _com_dispatch_propput(this, 0xc, VT_R8, _val);
+}
+
+inline long _DTTankX::GetEvChannel ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0xd, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DTTankX::PutEvChannel ( long _val ) {
+    _com_dispatch_propput(this, 0xd, VT_I4, _val);
+}
+
+inline _bstr_t _DTTankX::GetUsername ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0xe, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutUsername ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0xe, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DTTankX::GetDomain ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0xf, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutDomain ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0xf, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DTTankX::GetPassword ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x10, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutPassword ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x10, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DTTankX::GetCurBlockNotes ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x11, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DTTankX::PutCurBlockNotes ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x11, VT_BSTR, (BSTR)_val);
+}
