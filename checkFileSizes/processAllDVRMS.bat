@@ -1,0 +1,1 @@
+FOR %%I IN ("C:\Users\Public\Recorded TV\*.dvr-ms") DO CALL "c:\usr\cpp\checkFileSizes\processDVRMS.bat" "%%I"
